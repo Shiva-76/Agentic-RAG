@@ -1,0 +1,14 @@
+langgraph
+langchain-core
+langchain-text-splitters
+google-genai
+groq
+langsmith
+fastapi
+uvicorn[standard]
+qdrant-client
+ddgs
+numexpr
+streamlit
+python-dotenv
+pypdf

@@ -1,0 +1,30 @@
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 24px;
+}
+
+.chat-empty {
+  margin: auto;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.chat-empty h2 {
+  color: var(--text);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.chat-messages {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 40px;
+}

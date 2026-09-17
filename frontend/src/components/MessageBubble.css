@@ -1,0 +1,121 @@
+.message-wrapper {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.message-wrapper.user {
+  justify-content: flex-end;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ai-avatar {
+  background: var(--surface-2);
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+
+.user-avatar {
+  background: var(--accent);
+  color: #fff;
+}
+
+.message-content {
+  max-width: 80%;
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.user .message-content {
+  background: var(--user-bubble);
+  color: #fff;
+  border-top-right-radius: 4px;
+}
+
+.ai .message-content {
+  background: var(--ai-bubble);
+  border: 1px solid var(--border);
+  border-top-left-radius: 4px;
+}
+
+/* Markdown styling inside bubbles */
+.message-content p { margin-bottom: 1em; }
+.message-content p:last-child { margin-bottom: 0; }
+.message-content a { color: var(--accent); text-decoration: none; }
+.message-content a:hover { text-decoration: underline; }
+.message-content pre {
+  background: rgba(0,0,0,0.3);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin: 12px 0;
+}
+.message-content code {
+  font-family: monospace;
+  background: rgba(0,0,0,0.2);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+.typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Sources */
+.sources-list {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.sources-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.source-tag {
+  font-size: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: var(--accent-2);
+}
